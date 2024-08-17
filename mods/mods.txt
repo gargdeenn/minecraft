@@ -1,0 +1,8 @@
+https://mediafilez.forgecdn.net/files/4940/614/Terralith_1.18.2_v2.2.6.jar
+https://mediafilez.forgecdn.net/files/4047/163/DungeonsArise-1.18.2-2.1.52-release.jar
+https://mediafilez.forgecdn.net/files/4699/538/HangGlider-v3.0.0-1.18.2-Forge.jar
+https://mediafilez.forgecdn.net/files/5390/38/DistantHorizons-2.1.0-a-1.18.2.jar
+https://mediafilez.forgecdn.net/files/4532/901/journeymap-1.18.2-5.9.7-forge.jar
+https://mediafilez.forgecdn.net/files/4531/755/cristellib-forge-1.0.0.jar
+https://mediafilez.forgecdn.net/files/4707/477/PuzzlesLib-v3.5.8-1.18.2-Forge.jar
+https://maven.minecraftforge.net/net/minecraftforge/forge/1.18.2-40.2.21/forge-1.18.2-40.2.21-installer.jar
