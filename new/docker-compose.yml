@@ -3,7 +3,7 @@ services:
     restart: "no"
     image: itzg/minecraft-server
     ports:
-      - "25565:25565/tcp"
+      - "25565:25565/udp"
     environment:
       EULA: "TRUE"
       VERSION: ${MINECRAFT_VERSION:-LATEST}
@@ -15,7 +15,7 @@ services:
   vanillatweaks_sharecode:
     # port is set to 25566 to not conflict with vanillatweaks_file example
     ports:
-      - "25566:25565/tcp"
+      - "25566:25565/udp"
     restart: "no"
     image: itzg/minecraft-server
     environment:
@@ -28,7 +28,7 @@ services:
     restart: "no"
     image: itzg/minecraft-server
     ports:
-      - "25567:25565/tcp"
+      - "25567:25565/udp"
     environment:
       EULA: "TRUE"
       VERSION: ${MINECRAFT_VERSION:-LATEST}
