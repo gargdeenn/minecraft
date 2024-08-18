@@ -1,43 +1,13 @@
 services:
-  vanillatweaks_file:
-    restart: "no"
+  mc:
     image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
     ports:
       - "25565:25565/udp"
     environment:
       EULA: "TRUE"
       VERSION: ${MINECRAFT_VERSION:-LATEST}
-      VANILLATWEAKS_FILE: /config/vanillatweaks-datapacks.json
-      REMOVE_OLD_VANILLATWEAKS: "TRUE"
     volumes:
-      - data:/data
-      - ./vanillatweaks-datapacks.json:/config/vanillatweaks-datapacks.json:ro
-  vanillatweaks_sharecode:
-    # port is set to 25566 to not conflict with vanillatweaks_file example
-    ports:
-      - "25566:25565/udp"
-    restart: "no"
-    image: itzg/minecraft-server
-    environment:
-      EULA: "TRUE"
-      VERSION: ${MINECRAFT_VERSION:-LATEST}
-      VANILLATWEAKS_SHARECODE: MGr52E
-      REMOVE_OLD_VANILLATWEAKS: "TRUE"
-  vanillatweaks_file_datapacks_and_resourcepacks_and_craftingtweaks:
-    # port is set to 25567 to not conflict with vanillatweaks_file example
-    restart: "no"
-    image: itzg/minecraft-server
-    ports:
-      - "25567:25565/udp"
-    environment:
-      EULA: "TRUE"
-      VERSION: ${MINECRAFT_VERSION:-LATEST}
-      VANILLATWEAKS_FILE: /config/vanillatweaks-datapacks.json,/config/vanillatweaks-resourcepacks.json,/config/vanillatweaks-craftingtweaks.json
-      REMOVE_OLD_VANILLATWEAKS: "TRUE"
-    volumes:
-      - data:/data
-      - ./vanillatweaks-datapacks.json:/config/vanillatweaks-datapacks.json:ro
-      - ./vanillatweaks-resourcepacks.json:/config/vanillatweaks-resourcepacks.json:ro
-      - ./vanillatweaks-craftingtweaks.json:/config/vanillatweaks-craftingtweaks.json:ro
-volumes:
-  data:
+      # attach the relative directory 'data' to the container's /data path
+      - ./data:/data
