@@ -7,7 +7,7 @@ services:
       EULA: true
       VERSION: 1.21.1
       DIFFICULTY: normal
-      ONLINE_MODE: false
+      ONLINE_MODE: true
       TYPE: vanilla
       MOTD: Bienvenido
       ALLOW_NETHER: true
@@ -17,7 +17,6 @@ services:
       SPAWN_MONSTERS: true
       SPAWN_NPCS: true
       SEED: 1959330209
-      MODE: supervivencia
       SERVER_NAME: AWSCRAFT XD
       ENABLE_WHITELIST: false
     volumes:
