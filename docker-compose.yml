@@ -2,13 +2,14 @@ services:
   minecraft-server:
     image: itzg/minecraft-server:java17-alpine
     ports: 
-      - 25565:25565
+      - 25565:25565/tcp
+      - 25565:25565/udp
     restart: always
     environment:
       EULA: true
       TYPE: FORGE
       VERSION: 1.18.2
-      FORGE_VERSION: 40.2.7
+      FORGE_VERSION: 40.2.0
       DIFFICULTY: normal
       ONLINE_MODE: false
       MODS_FILE: "/mods/mods.txt"
